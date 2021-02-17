@@ -1,6 +1,5 @@
  <h1 align="center"> FARMERX <br/>The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings.  
 
-Read more: https://www.wisesayings.com/farming-quotes/#ixzz6mlMDdMqa</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
  
