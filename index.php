@@ -307,13 +307,12 @@
     <!--FOOTER BEGINS-->
 
     <!-- Site footer -->
-    <footer class="site-footer">
+   <footer class="site-footer" style="font-family: 'Roboto Mono', monospace;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <h6>About</h6>
-                    <p class="text-justify">Something about us <i>ITALICS GO HERE </i> RANDOM blah blah goes here. This
-                        text to be editted later. So give me suggestions regarding footer.</p>
+                    <p class="text-justify">We at FARMERx aim to radically change the lives and technologies used by farmers to empower them and change their lives drastically.</p>
                 </div>
 
                 <div class="col-xs-6 col-md-3">
