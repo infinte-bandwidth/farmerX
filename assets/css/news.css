@@ -1,5 +1,7 @@
 /*HANDMADE CODE FOR NEWS TILES WITH MEDIA QUERIES*/
-
+.title-container * {
+	overflow: hidden;
+}
 .tile-container {
 	display: flex;
 	flex-flow: row wrap;
@@ -23,23 +25,23 @@
 }
 
 .tile-container * {
-	/*border: 1px solid red;*/
-	/*for testing phase*/
+	/*border: 1px solid red;*/ /*for testing phase*/
 }
 
 .l-tile {
-	display: flex;
-	flex-flow: column-reverse nowrap;
-	align-items: center;
-	width: 100%;
-	/*for mobiles width range [0,700px]*/
+	width: 100%; /*for mobiles width range [0,700px]*/
 	height: 25rem;
 	background: #90CAF9;
 	margin: 0.5%;
+	position: relative;
 }
 
+.l-tile,.m-tile,.s-tile {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	background-position: center !important;
+}
 /*for making tiles responsive, dont change it*/
-
 @media only screen and (min-width:700px) {
 	.l-tile {
 		width: 49%;
@@ -47,6 +49,7 @@
 }
 
 @media only screen and (min-width:800px) {
+
 	.tile-container {
 		padding: 0 2.5rem 0 2.5rem;
 	}
@@ -56,35 +59,36 @@
 	.tile-container {
 		padding: 0 10% 0 10%;
 	}
+	
 	.l-tile {
 		height: 25rem;
 	}
 }
 
 .m-tile {
-	display: flex;
-	flex-flow: column nowrap;
 	margin: 0.5%;
 	width: 100%;
 	height: 48.5%;
-	background: #90CAF9;
-	background: red;
+	position: relative;
 }
 
 .s-tile {
 	width: 49.5%;
 	height: 100%;
-	background: #90CAF9;
-	background: orange;
+	position: relative;
 }
 
 .container-s-tile {
-	flex-flow: row wrap;
+	display: flex;
+	flex-flow: row wrap; 
 	justify-content: space-between;
 	background: #FFFF;
 }
 
 .container-m-tile {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
 	background: #FFFF;
 	justify-content: space-between;
 }
@@ -93,7 +97,8 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0,0,0,0.3);
+	opacity: 0;
 	color: #FFFF;
 	text-align: center;
 	width: 100%;
@@ -101,9 +106,15 @@
 	transition: 0.7s;
 }
 
+.tile-text:hover {
+	opacity: 1;
+	backdrop-filter: blur(0.5rem);
+}
+
+
 .tile-text-heading {
 	font: 2.0rem Raleway;
-	margin: auto 0 0.25rem 0;
+	margin: 0.5rem 0 0.25rem 0;
 }
 
 .tile-text-body {
@@ -130,8 +141,11 @@
 .time {
 	width: fit-content;
 	background: #01579B;
-	text-align: left;
-	padding: 0 0.5rem 0 0.5rem;
-	margin-top: auto;
+	padding: 0.25rem;
+	color: white;
 	font: 1rem "Segoe UI";
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
+
