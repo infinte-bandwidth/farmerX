@@ -5,9 +5,11 @@
  
 <h2 align="center">
 
+![GitHub stars](https://img.shields.io/github/stars/infinte-bandwidth/farmerX.svg?logo=github)
 ![GitHub forks](https://img.shields.io/github/forks/infinte-bandwidth/farmerX.svg?logo=github&color=teal)
 ![https://img.shields.io/badge/Licience-MIT-green](https://img.shields.io/badge/Licience-MIT-green)
 ![Contribotion](https://img.shields.io/badge/Contribution-Welcome-brightgreen)
+![GitHub top language](https://img.shields.io/github/languages/top/infinte-bandwidth/farmerX?color=yellow&logo=python)
 
 ## LOGO
 <img src="https://cdn2.vectorstock.com/i/1000x1000/69/51/farmer-stylized-portrait-organic-products-logo-vector-22656951.jpg" height="250px">
@@ -66,4 +68,5 @@ Please adhere toward our [Code-of-Conduct](Code-of-Conduct.md).
   <img src="https://contrib.rocks/image?repo=infinte-bandwidth/farmerX" />
 </a>
 
+### Like This?? Star ⭐ this Repo.
 💜 **Thanks**
