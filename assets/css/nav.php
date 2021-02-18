@@ -147,3 +147,15 @@ else
 	background-size:cover;
 	background-position: center;
 }
+
+.login {
+	margin-left: auto;
+}
+
+.sign-up,.login {
+	margin-right: 1.5rem;
+}
+
+.login>ion-icon,.sign-up>ion-icon {
+	font-size: 2.1rem;
+}
