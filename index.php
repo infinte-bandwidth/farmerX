@@ -56,7 +56,6 @@
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
         <a href="" class="item1">
             <ion-icon name="leaf-outline"></ion-icon>
-            <br>
             <?php 
             if (isset($_SESSION['username']))
             {
