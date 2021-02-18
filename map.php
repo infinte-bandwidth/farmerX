@@ -78,6 +78,10 @@ session_start();
 		<ion-icon name="earth-outline"></ion-icon>
 	</div>
 	<div id ="wrapper">
+		<?php
+		$output = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>"; 
+		echo $output;
+		?>
 <svg
    id="svg2"
    viewBox="0 0 650 650"
