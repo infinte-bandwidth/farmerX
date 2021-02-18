@@ -2,7 +2,7 @@
 $showAlert = false;
 $showError = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'partial/dbconnect.php';
+    include 'dbconnect.php';
     $username = $_POST["username"];
     $state = $_POST["state"];
     $password = $_POST["password"];
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
-                header("location: login.php");
+                header("location: index.php");
             }
         } else {
             $showError = "Password do not match";
@@ -345,3 +345,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
+
