@@ -4,7 +4,7 @@ $login = false;
 $showError = false;
 $captcha;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'partial/dbconnect.php';
+    include 'dbconnect.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
 
@@ -13,21 +13,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!$captcha) {
-        echo '<h2>Please check the the captcha form.</h2>';
-        exit;
+        echo "<script> window.alert('Please check the captcha form.'); 
+        window.location='login.php'; </script>";
     }
 
     $secretKey = "6LdEKVgaAAAAAOm6WolOYzm3qJMs2gsRUW5n-soU";
 
     $ip = $_SERVER['REMOTE_ADDR'];
-    // post request to server
+
     $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
     $response = file_get_contents($url);
     $responseKeys = json_decode($response, true);
-    // should return JSON with success as true
+
     if ($responseKeys["success"]) {
 
-        $sql = "Select * from users where username='$username' AND password='$password'";
+        $sql = "Select * from users where username = '$username' AND password = '$password'";
         $result = mysqli_query($conn, $sql);
         $num = mysqli_num_rows($result);
         if ($num == 1) {
@@ -35,12 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
-            header("location: homepage.php");
+            header("location: index.php");
+
         } else {
             $showError = "Invalid Credentials";
         }
-    } else {
-        echo '<h2>You are spammer ! Get the @$%K out</h2>';
     }
 }
 ?>
@@ -76,24 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
 
-    <?php
-    if ($login) {
-        echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> You are logged in
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
-    }
-    if ($showError) {
-        echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> ' . $showError . '
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
-    }
-    ?>
+    
 
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
@@ -171,8 +153,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="logo" style="margin-top: 0.02px;">
                 <p style="font-family: 'Roboto Mono', monospace; height:50px;">Login to your account</p>
             </div>
+            <?php
+    if ($login) {
+        echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> You are logged in
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    if ($showError) {
+        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:90%; margin: 0 auto 0 auto;">
+        <strong>Error!</strong> ' . $showError . '
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        </div> ';
+    }
+    ?>
             <div class="login-item">
-                <form action="/LoginSystem/login1.php" method="post" class="form form-login">
+                <form action="login.php" method="post" class="form form-login">
                     <div class="form-field">
                         <label style="height: 55px;" class="user" for="login-username"><span class="hidden">Username</span></label>
                         <input style="height: 55px;" type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Username" required>
@@ -294,3 +294,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
+
