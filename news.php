@@ -1,3 +1,5 @@
+<?php include 'dbconnect.php';
+session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/nav.php">
+    <link rel="stylesheet" href="assets/css/nav.php">
 	<link rel="stylesheet" href="assets/css/reset.css"> <!--CSS RESET FOR CONSISTANCE LOOK ON BROWSERS-->
 	<link rel="stylesheet" href="assets/css/news.css">
 
@@ -114,58 +116,77 @@
 <body>
 	<!--NAVIGATION BAR STARTS-->
 	<nav class="h-nav">
-		<ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
-	</nav>
-	<nav class="v-nav-primary">
-		<ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
-		<a href="" class="item1">
-			<ion-icon name="leaf-outline"></ion-icon>
-			Menu
-		</a>
-		<a href="" class="v-nav-item item2">
-			<ion-icon name="home-outline"></ion-icon>
-			Home
-		</a>
-		<a href="javascript:openServices()" class="v-nav-item">
-			<ion-icon name="bar-chart-outline"></ion-icon>
-			Services
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="call-outline"></ion-icon>
-			Contact Us
-		</a>
-	</nav>
-	<nav class="v-nav-services">
-		<ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
-		<a href="" class="item1">
-			<ion-icon name="bag-handle"></ion-icon>
-			Services
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="cloudy-night-outline"></ion-icon>
-			Weather Forcast
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="bag-check-outline"></ion-icon>
-			Resources
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="logo-usd"></ion-icon>
-			MSP
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="fish-outline"></ion-icon>
-			Major Crops
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="color-fill-outline"></ion-icon>
-			Soil Health Card
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="finger-print-outline"></ion-icon>
-			Agricultural Land
-		</a>
-	</nav>
+        <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
+    </nav>
+    <nav class="v-nav-primary">
+        <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
+        <a href="" class="item1">
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo '<ion-icon name=""></ion-icon>';
+                echo $_SESSION['username'];
+            }
+            else
+            {
+                echo '<ion-icon name="leaf-outline"></ion-icon>';
+                echo "Menu";
+            }
+            ?>
+        </a>
+        <a href="" class="v-nav-item item2">
+            <ion-icon name="home-outline"></ion-icon>
+            Home
+        </a>
+        <a href="javascript:openServices()" class="v-nav-item">
+            <ion-icon name="bar-chart-outline"></ion-icon>
+            Services
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="call-outline"></ion-icon>
+            Contact Us
+        </a>
+    </nav>
+    <nav class="v-nav-services">
+        <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
+        <a href="" class="item1">
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo "<ion-icon name=''></ion-icon>";
+            }
+            else
+            {
+                echo "<ion-icon name='bag-handle'></ion-icon>";
+            }
+            ?>
+            Services
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="cloudy-night-outline"></ion-icon>
+            Weather Forcast
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="bag-check-outline"></ion-icon>
+            Resources
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="logo-usd"></ion-icon>
+            MSP
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="fish-outline"></ion-icon>
+            Major Crops
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="color-fill-outline"></ion-icon>
+            Soil Health Card
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="finger-print-outline"></ion-icon>
+            Agricultural Land
+        </a>
+    </nav>
 	<!--NAVIGATION BAR ENDS-->
 	<div class="tile-container">
 		<h1><ion-icon name="newspaper-outline"></ion-icon>Agricultural News</h1>
