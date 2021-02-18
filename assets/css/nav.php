@@ -1,7 +1,7 @@
 <?php header("Content-type: text/css"); ?>
 
 <?php
-include 'dbconnect.php';
+include '../../dbconnect.php';
 session_start();
 // fetch image from database
 if (isset($_SESSION['username']))
