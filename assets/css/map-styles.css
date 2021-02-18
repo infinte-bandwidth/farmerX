@@ -1,0 +1,71 @@
+
+#wrapper {
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#wrapper svg {
+	width: 100%;
+	height: 100%;
+}
+
+path {
+	transition: 0.5s ease;
+}
+
+#tool-tip {
+	opacity: 0;
+	transition: 0.5s;
+	position: absolute;
+	background: #0D47A1;
+	color: white;
+	padding: 0.4rem;
+	font: 1rem "Segoe UI";
+	top: 0;
+	left: 0;
+}
+
+/*.state:hover {
+	fill:yellow;
+}*/
+
+/*#IN-CH {
+	fill: yellow;
+}
+
+#IN-DD {
+	fill: yellow;
+}*/
+
+path {
+	fill: #64DD17;
+	stroke: #33691E;
+	stroke-width: 0.02rem;
+}
+
+path:hover {
+	fill: #FF3D00;
+}
+
+
+.state-name {
+	font-size: 2rem;
+}
+
+#tool-tip {
+	font-size: 0.9rem;
+}
+
+/*@media screen only (max-width: 450px) {
+	.state-name {
+		font-size: 0rem;
+	}
+	#tool-tip {
+		font-size: 0.7rem;
+	}
+}*/
+
+   
