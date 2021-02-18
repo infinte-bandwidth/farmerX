@@ -301,23 +301,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/nav.js"></script>
     <script>
         AOS.init();
-		var elem=document.getElementsByClassName("l-tile");
-		function openServices() {
-			document.getElementsByClassName("v-nav-services")[0].style.left="0px";
-		}
-		function closeServices() {
-			document.getElementsByClassName("v-nav-services")[0].style.left="-15rem";
-		}
-		function openNav() {
-			document.getElementsByClassName("v-nav-primary")[0].style.left="0px";
-		}
-		function closeNav() {
-			document.getElementsByClassName("v-nav-primary")[0].style.left="-15rem";
-		}
-		
-
     </script>
 </body>
 
