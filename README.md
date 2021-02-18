@@ -30,6 +30,8 @@
 Read these articles to get a quick grab on Php and other technologies used in the project:
 
 ### Resources for PHP:
+- https://www.php.net/manual/en/index.php
+- https://www.w3schools.com/php/
 
 ### Resources to learn Git and Github:
 - https://try.github.io/
