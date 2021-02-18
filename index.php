@@ -51,6 +51,8 @@
 <body>
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
+		<a href="" class="login"><ion-icon name="log-in-outline"></ion-icon></a>
+		<a href="" class="sign-up"><ion-icon name="person-add-outline"></ion-icon></a>
     </nav>
     <nav class="v-nav-primary">
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
@@ -131,7 +133,7 @@
     <!--nyc icons,100% scalable-->
     <!--
     <!--MAIN SLIDE BEGINS-->
-
+<div class="wrap" onclick="ifNav()">    
     <div id="container" class="mainbg" data-aos="fade-down">
         <img src="assets/images/bg3.jpg" style="height: 760px; width: 100%; ">
         <img src="assets/images/bg4.jpg" style="height: 760px; width: 100%; ">
@@ -368,6 +370,7 @@
             </div>
         </div>
     </footer>
+  </div>
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
