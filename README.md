@@ -38,6 +38,8 @@ Read these articles to get a quick grab on Php and other technologies used in th
 - https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources
 - https://guides.github.com/activities/hello-world/
 
+# This project is a part of Hack it out 2021 👣
+
 ##  💼  Code of Conduct
 
 We want to facilitate a healthy and constructive community behavior by adopting and enforcing our code of conduct.
