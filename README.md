@@ -8,6 +8,16 @@
 ![https://img.shields.io/badge/Licience-MIT-green](https://img.shields.io/badge/Licience-MIT-green)
 ![Contribotion](https://img.shields.io/badge/Contribution-Welcome-brightgreen)
 
+## Features
+
+* Connect to global Market
+* Wheather Forecast
+* MSP
+* Login/SignUp
+* Maps
+
+## ⚡ Function of FarmerX
+
 ## 🔆 Tech Stack
 
 -  JavaScript: xx%
@@ -15,7 +25,23 @@
 -  CSS: XX %%
 -  HTML: XX %%
 
+## 📝 Learning Resources
+
+Read these articles to get a quick grab on Php and other technologies used in the project:
+
+### Resources for PHP:
+
+### Resources to learn Git and Github:
+- https://try.github.io/
+- https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources
+- https://guides.github.com/activities/hello-world/
+
 ##  💼  Code of Conduct
 
 We want to facilitate a healthy and constructive community behavior by adopting and enforcing our code of conduct.
 Please adhere toward our [Code-of-Conduct](Code-of-Conduct.md).
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+💜 **Thanks**
