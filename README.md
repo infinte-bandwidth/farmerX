@@ -7,3 +7,8 @@
 
 ![https://img.shields.io/badge/Licience-MIT-green](https://img.shields.io/badge/Licience-MIT-green)
 ![Contribotion](https://img.shields.io/badge/Contribution-Welcome-brightgreen)
+
+##  💼  Code of Conduct
+
+We want to facilitate a healthy and constructive community behavior by adopting and enforcing our code of conduct.
+Please adhere toward our [Code-of-Conduct](Code-of-Conduct.md).
