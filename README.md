@@ -5,6 +5,7 @@
  
 <h2 align="center">
 
+![GitHub forks](https://img.shields.io/github/forks/infinte-bandwidth/farmerX.svg?logo=github&color=teal)
 ![https://img.shields.io/badge/Licience-MIT-green](https://img.shields.io/badge/Licience-MIT-green)
 ![Contribotion](https://img.shields.io/badge/Contribution-Welcome-brightgreen)
 
