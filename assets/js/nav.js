@@ -13,3 +13,11 @@ function openServices() {
         function closeNav() {
             document.getElementsByClassName("v-nav-primary")[0].style.left = "-15rem";
         }
+
+function ifNav() {
+	if(document.getElementsByClassName("v-nav-services")[0].style.left=="0px") {
+		closeServices();
+	} else if(document.getElementsByClassName("v-nav-primary")[0].style.left=="0px") {
+		closeNav();
+	}
+}
