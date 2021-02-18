@@ -284,27 +284,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
+    <script src="assets/js/nav.js"></script>
     <script>
         AOS.init();
-        var elem = document.getElementsByClassName("l-tile");
-
-        function openServices() {
-            document.getElementsByClassName("v-nav-services")[0].style.left = "0px";
-        }
-
-        function closeServices() {
-            document.getElementsByClassName("v-nav-services")[0].style.left = "-15rem";
-        }
-
-        function openNav() {
-            document.getElementsByClassName("v-nav-primary")[0].style.left = "0px";
-        }
-
-        function closeNav() {
-            document.getElementsByClassName("v-nav-primary")[0].style.left = "-15rem";
-        }
-    </script>
-    <script>
         $(window).on("load", function() {
             $(".loader-wrapper").fadeOut("slow");
         });
