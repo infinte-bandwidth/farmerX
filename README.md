@@ -8,6 +8,9 @@
 ![https://img.shields.io/badge/Licience-MIT-green](https://img.shields.io/badge/Licience-MIT-green)
 ![Contribotion](https://img.shields.io/badge/Contribution-Welcome-brightgreen)
 
+## LOGO
+<img src="https://cdn2.vectorstock.com/i/1000x1000/69/51/farmer-stylized-portrait-organic-products-logo-vector-22656951.jpg" height="250px">
+
 ## Features
 
 * Connect to global Market
