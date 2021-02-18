@@ -37,6 +37,7 @@ html,body {
 	position: fixed;
 	color: #FFFF;
 	z-index: 90;
+	top: 0;
 }
 
 .h-nav ion-icon {
@@ -54,6 +55,7 @@ html,body {
 	left:-15rem;
 	z-index: 100;
 	backdrop-filter: blur(0.5rem);
+	top: 0;
 }
 .v-nav-primary:hover,.v-nav-services:hover {
 	background: rgba(25,118,210,0.7);
