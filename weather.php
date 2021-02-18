@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/reset.css">
+    <link href="assets/css/nav.php">
 
     <?php
 
@@ -187,7 +189,72 @@
 </head>
 
 <body>
-
+ <nav class="h-nav">
+        <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
+    </nav>
+    <nav class="v-nav-primary">
+        <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
+        <a href="" class="item1">
+            <ion-icon name="leaf-outline"></ion-icon>
+            <br>
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo $_SESSION['username'];
+            }
+            else
+            {
+                echo "Menu";
+            }
+            ?>
+        </a>
+        <a href="" class="v-nav-item item2">
+            <ion-icon name="home-outline"></ion-icon>
+            Home
+        </a>
+        <a href="javascript:openServices()" class="v-nav-item">
+            <ion-icon name="bar-chart-outline"></ion-icon>
+            Services
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="call-outline"></ion-icon>
+            Contact Us
+        </a>
+    </nav>
+    <nav class="v-nav-services">
+        <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
+        <a href="" class="item1">
+            <ion-icon name="bag-handle"></ion-icon>
+            Services
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="cloudy-night-outline"></ion-icon>
+            Weather Forcast
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="bag-check-outline"></ion-icon>
+            Resources
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="logo-usd"></ion-icon>
+            MSP
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="fish-outline"></ion-icon>
+            Major Crops
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="color-fill-outline"></ion-icon>
+            Soil Health Card
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="finger-print-outline"></ion-icon>
+            Agricultural Land
+        </a>
+    </nav>
+    <!--NAVIGATION BAR ENDS-->
+    
+    
     <?php for ($i = 0; $i < $cnt; $i++) { ?>
 
         <?php if ($time[$i] == "9 AM") { ?> <div class="parallax" style="background-image : url('assets/images/bg101.jpg')"> </div> <?php } ?>
@@ -238,7 +305,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="assets/js/nav.js"></script>
     <script>
         AOS.init();
     </script>
