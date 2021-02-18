@@ -45,7 +45,16 @@ else
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
         <a href="" class="item1">
             <ion-icon name="leaf-outline"></ion-icon>
-            Menu
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo $_SESSION['username'];
+            }
+            else
+            {
+                echo "Menu";
+            }
+            ?>
         </a>
         <a href="" class="v-nav-item item2">
             <ion-icon name="home-outline"></ion-icon>
