@@ -1,3 +1,20 @@
+<?php
+include 'dbconnect.php';
+$state="";
+session_start();
+if(!isset($_SESSION['loggedin']))
+{
+	header('Location: login.php'); 
+    echo "<script> window.alert('Please sign in first.'); </script>";
+}
+else
+{
+	$sql = "select * from users where username=" . "'" . $_SESSION['username'] . "'";
+	$result = mysqli_query($conn, $sql) or die('Error ' . mysqli_error($conn));
+	$row = mysqli_fetch_array($result);
+	$state=$row['state'];
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -5,14 +22,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Forcast</title>
+    <title>Weather Forcast of <?php echo $state;?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="assets/css/reset.css">
-    <link href="assets/css/nav.php">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/nav.php">
 
     <?php
 
@@ -74,7 +91,14 @@
 
     $apiKey = "5a4614167ed2e6f3a19895fb659e3422";
 
-    $cityName = "Lucknow";
+    if($state!="")
+    {
+        $cityName = "Lucknow";
+    }
+    else
+    {
+        $cityName = $state;
+    }
 
     $googleApiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" . $cityName . "&lang=en&units=metric&APPID=" . $apiKey;
 
@@ -189,21 +213,21 @@
 </head>
 
 <body>
- <nav class="h-nav">
+    <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
     </nav>
     <nav class="v-nav-primary">
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
         <a href="" class="item1">
-            <ion-icon name="leaf-outline"></ion-icon>
-            <br>
             <?php 
             if (isset($_SESSION['username']))
             {
+                echo '<ion-icon name=""></ion-icon>';
                 echo $_SESSION['username'];
             }
             else
             {
+                echo '<ion-icon name="leaf-outline"></ion-icon>';
                 echo "Menu";
             }
             ?>
@@ -224,7 +248,16 @@
     <nav class="v-nav-services">
         <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
         <a href="" class="item1">
-            <ion-icon name="bag-handle"></ion-icon>
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo "<ion-icon name=''></ion-icon>";
+            }
+            else
+            {
+                echo "<ion-icon name='bag-handle'></ion-icon>";
+            }
+            ?>
             Services
         </a>
         <a href="" class="v-nav-item">
@@ -306,6 +339,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
         AOS.init();
     </script>
@@ -315,3 +349,4 @@
 </body>
 
 </html>
+
