@@ -129,7 +129,7 @@
         <img src="assets/images/bg6.jpg" style="height: 760px;width: 100%; ">
         <img src="assets/images/bg1.jpg" style="height: 760px; width: 100%; ">
         <div class="centered-text" style=" left: 50%;">
-            <h2 style="font-size:5vw;  font-family: 'Roboto Mono', monospace; ">WELCOME TO THE ABODE</h2>
+            <h2 style="font-size:5vw;  font-family: 'Roboto Mono', monospace; height:100px;">WELCOME TO THE ABODE</h2>
         </div>
 
 
@@ -295,7 +295,7 @@
 
     <div class="mainbg-secondary" data-aos="fade-down">
         <div class="centered-text-secondary" style="left: 50%;">
-            <h1 style="font-size: 5vw;">WE CARE FOR THE FARMERS.</h1>
+            <h1 style="font-size: 5vw;height:100px;">WE CARE FOR THE FARMERS.</h1>
         </div>
     </div>
 
