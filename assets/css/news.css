@@ -1,0 +1,137 @@
+/*HANDMADE CODE FOR NEWS TILES WITH MEDIA QUERIES*/
+
+.tile-container {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	padding: 0 1rem 0 1rem;
+	margin-top: 2rem;
+	justify-content: center;
+}
+
+.tile-container>h1 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font: 2.5rem Raleway;
+	color: #1976D2;
+}
+
+.tile-container ion-icon {
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+.tile-container * {
+	/*border: 1px solid red;*/
+	/*for testing phase*/
+}
+
+.l-tile {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	align-items: center;
+	width: 100%;
+	/*for mobiles width range [0,700px]*/
+	height: 25rem;
+	background: #90CAF9;
+	margin: 0.5%;
+}
+
+/*for making tiles responsive, dont change it*/
+
+@media only screen and (min-width:700px) {
+	.l-tile {
+		width: 49%;
+	}
+}
+
+@media only screen and (min-width:800px) {
+	.tile-container {
+		padding: 0 2.5rem 0 2.5rem;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.tile-container {
+		padding: 0 10% 0 10%;
+	}
+	.l-tile {
+		height: 25rem;
+	}
+}
+
+.m-tile {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 0.5%;
+	width: 100%;
+	height: 48.5%;
+	background: #90CAF9;
+	background: red;
+}
+
+.s-tile {
+	width: 49.5%;
+	height: 100%;
+	background: #90CAF9;
+	background: orange;
+}
+
+.container-s-tile {
+	flex-flow: row wrap;
+	justify-content: space-between;
+	background: #FFFF;
+}
+
+.container-m-tile {
+	background: #FFFF;
+	justify-content: space-between;
+}
+
+.tile-text {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.5);
+	color: #FFFF;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	transition: 0.7s;
+}
+
+.tile-text-heading {
+	font: 2.0rem Raleway;
+	margin: auto 0 0.25rem 0;
+}
+
+.tile-text-body {
+	padding: 0 0.5rem 0 0.5rem;
+	align-items: center;
+	font: 1rem "Segoe UI Light";
+}
+
+.button {
+	font-size: 1rem;
+	display: block;
+	border: 1px solid #FFFF;
+	padding: 0.5rem;
+	width: 7.5rem;
+	margin: 1rem auto 0 auto;
+	transition: 0.5s;
+}
+
+.button:hover {
+	background: #FFFF;
+	color: #0D47A1;
+}
+
+.time {
+	width: fit-content;
+	background: #01579B;
+	text-align: left;
+	padding: 0 0.5rem 0 0.5rem;
+	margin-top: auto;
+	font: 1rem "Segoe UI";
+}
