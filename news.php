@@ -11,8 +11,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/nav.css">
-	<link rel="stylesheet" href="styles/reset.css"> <!--CSS RESET FOR CONSISTANCE LOOK ON BROWSERS-->
-	<link rel="stylesheet" href="styles/news.css">
+	<link rel="stylesheet" href="assets/css/reset.css"> <!--CSS RESET FOR CONSISTANCE LOOK ON BROWSERS-->
+	<link rel="stylesheet" href="assets/css/news.css">
 
 	<?php
 		$apiKey = "a7e6d8fd7152437eb8a161fb1206a390";
