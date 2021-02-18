@@ -1,6 +1,18 @@
 <?php
 include 'dbconnect.php';
+$state=="";
 session_start();
+if(!isset($_SESSION['loggedin']))
+{
+	header('Location: login.php'); 
+}
+else
+{
+	$sql = "select * from users where username=" . "'" . $_SESSION['username'] . "'";
+	$result = mysqli_query($conn, $sql) or die('Error ' . mysqli_error($conn));
+	$row = mysqli_fetch_array($result);
+	$state=$row['state'];
+}
 ?>
 <!doctype html>
 <html>
@@ -13,11 +25,16 @@ session_start();
 		<link rel="stylesheet" href="assets/css/reset.css">
 		<link rel="stylesheet" href="assets/css/map-styles.css">
 		<link rel="stylesheet" href="assets/css/nav.php">
-		<style>
-			path[title="Uttar Pradesh"] {
+		<?php
+		if($state!="")
+		{
+			echo "<style>
+			path[title=" . "'" . $state . "'" . "] {
 				fill: #558B2F;
 			}
-		</style>
+			</style>";
+		}
+		?>
 	</head>
 	<body>
 	
