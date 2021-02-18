@@ -73,11 +73,20 @@ html,body {
 	color: #1976D2;
 	border-radius: 100%;
 }
-.item1>ion-icon:hover {
-	background: #FFFF;
-	color: #64B5F6;
+<?php
+if(isset($_SESSION['username']))
+{
+	echo ".item1>ion-icon:hover {
+	}";
 }
-
+else
+{
+	echo ".item1>ion-icon:hover {
+		background: #FFFF;
+		color: #64B5F6;
+	}";
+}
+?>
 .v-nav-services>.item1 {
 	margin-top: 1.5rem;
 }
@@ -136,4 +145,5 @@ html,body {
 .item1>ion-icon {
 	<?php echo 'background: url("data:image/jpeg;base64,' . base64_encode($row['imagedata']) . '");'; ?>
 	background-size:cover;
+	background-position: center;
 }
