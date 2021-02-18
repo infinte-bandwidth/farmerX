@@ -55,14 +55,15 @@
     <nav class="v-nav-primary">
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
         <a href="" class="item1">
-            <ion-icon name="leaf-outline"></ion-icon>
             <?php 
             if (isset($_SESSION['username']))
             {
+                echo '<ion-icon name=""></ion-icon>';
                 echo $_SESSION['username'];
             }
             else
             {
+                echo '<ion-icon name="leaf-outline"></ion-icon>';
                 echo "Menu";
             }
             ?>
@@ -83,7 +84,16 @@
     <nav class="v-nav-services">
         <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
         <a href="" class="item1">
-            <ion-icon name="bag-handle"></ion-icon>
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo "<ion-icon name=''></ion-icon>";
+            }
+            else
+            {
+                echo "<ion-icon name='bag-handle'></ion-icon>";
+            }
+            ?>
             Services
         </a>
         <a href="" class="v-nav-item">
@@ -401,3 +411,4 @@
 </body>
 
 </html>
+
