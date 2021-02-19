@@ -59,7 +59,81 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-
+    <nav class="h-nav">
+        <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
+        <?php
+        if (!isset($_SESSION['loggedin'])) {
+            echo "<a href='login.php' class='login'><ion-icon name='log-in-outline'></ion-icon></a>
+	        <a href='signup.php' class='sign-up'><ion-icon name='person-add-outline'></ion-icon></a>";
+        } else {
+            echo "<a href='logout.php' class='login'><ion-icon name='log-out-outline'></ion-icon></a>";
+        }
+        ?>
+    </nav>
+    <nav class="v-nav-primary">
+        <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
+        <a class="item1">
+            <?php
+            if (isset($_SESSION['username'])) {
+                echo '<ion-icon name=""></ion-icon>';
+                echo $_SESSION['username'];
+            } else {
+                echo '<ion-icon name="leaf-outline"></ion-icon>';
+                echo "Menu";
+            }
+            ?>
+        </a>
+        <a href="index.php" class="v-nav-item item2">
+            <ion-icon name="home-outline"></ion-icon>
+            Home
+        </a>
+        <a href="javascript:openServices()" class="v-nav-item">
+            <ion-icon name="bar-chart-outline"></ion-icon>
+            Services
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="call-outline"></ion-icon>
+            Contact Us
+        </a>
+    </nav>
+    <nav class="v-nav-services">
+        <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
+        <a class="item1">
+            <?php
+            if (isset($_SESSION['username'])) {
+                echo "<ion-icon name=''></ion-icon>";
+            } else {
+                echo "<ion-icon name='bag-handle'></ion-icon>";
+            }
+            ?>
+            Services
+        </a>
+        <a href="weather.php" class="v-nav-item">
+            <ion-icon name="cloudy-night-outline"></ion-icon>
+            Weather Forcast
+        </a>
+        <a href="resources.php" class="v-nav-item">
+            <ion-icon name="bag-check-outline"></ion-icon>
+            Resources
+        </a>
+        <a href="msp.php" class="v-nav-item">
+            <ion-icon name="logo-usd"></ion-icon>
+            MSP
+        </a>
+        <a href="market.php" class="v-nav-item">
+            <ion-icon name="fish-outline"></ion-icon>
+            Market
+        </a>
+        <a href="news.php" class="v-nav-item">
+            <ion-icon name="color-fill-outline"></ion-icon>
+            News
+        </a>
+        <a href="map.php" class="v-nav-item">
+            <ion-icon name="finger-print-outline"></ion-icon>
+            Agricultural Land
+        </a>
+    </nav>
+  <div class="wrap">
   <div class="bodyoflogin">
 
 
@@ -158,10 +232,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </footer>
   </div>
+  </div>
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
-
   <!--FOOTER ENDS-->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
