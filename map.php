@@ -117,6 +117,7 @@ if (!isset($_SESSION['loggedin'])) {
             Agricultural Land
         </a>
     </nav>
+	<div class="wrap">
 	<div class="container" style="height:800px;">
 		<div id="wrapper" style="margin-top:100px;">
 			<?php
@@ -231,6 +232,7 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
             </div>
         </footer>
+	</div>
 </body>
 <script>
 	var array = document.getElementsByClassName("state");
