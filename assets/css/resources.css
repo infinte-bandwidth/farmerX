@@ -1,0 +1,127 @@
+.tile-container {
+	width: 100%;
+	margin-top: 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.tile-container>h1 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: 2.5rem Raleway;
+	height: 4rem;
+	color: #0D47A1;
+}
+
+h1 ion-icon {
+	font-size: 4rem;
+	margin-right: 1rem;
+}
+
+.tile {
+	position: relative;
+	width: 25rem;
+	height: 20rem;
+	background: blue;
+	margin: 1px;
+	color: #FFFF;
+	padding: 1rem;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden !important;
+	transition: 0.5s;
+}
+
+.tile:hover {
+	transform: scale(0.95);
+}
+.tile h1 {
+	width: 100%;
+	font: 2rem Raleway;
+}
+
+.tile>ion-icon {
+	margin-top: 0.5rem;
+	font-size: 7rem;
+}
+
+.tile-1 {
+	background: #1976D2;
+}
+
+.tile-2 {
+	background: #DD2C00;
+}
+
+.tile-3 {
+	background: #2E7D32;
+}
+
+.tile-4 {
+	background: #37474F;
+}
+
+.tile-5 {
+	background: #6A1B9A;
+}
+
+.tile-6 {
+	background: #9E9D24;
+}
+
+@media only screen and (max-width: 450px) {
+	.tile {
+		width: 22rem;
+	}
+}
+
+.overlay {
+	top: 95%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	padding: 1rem;
+	font:  1.1rem "Segoe UI";
+	text-align: justify;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-1 {
+	background: #0D47A1;
+}
+
+.overlay-2 {
+	background: #B71C1C;
+}
+
+.overlay-3 {
+	background: #1B5E20;
+}
+
+.overlay-4 {
+	background: #263238;
+}
+
+.overlay-5 {
+	background: #4A148C;
+}
+
+.overlay-6 {
+	background: #827717;
+}
+
+.overlay ion-icon {
+	margin-top: 1rem;
+	font-size: 5rem;
+	
+}
+
