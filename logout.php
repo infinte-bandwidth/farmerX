@@ -5,5 +5,5 @@
     session_destroy();
 
     echo "<script> window.alert('You have been logged out.'); 
-        window.location='index.php'; </script>";
+        window.location='login.php'; </script>";
  ?>
