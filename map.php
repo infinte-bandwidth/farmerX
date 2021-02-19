@@ -43,7 +43,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body>
 
-	<nav class="h-nav">
+    <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
     <a href="" class="login"><ion-icon name="log-in-outline"></ion-icon></a>
 	<a href="" class="sign-up"><ion-icon name="person-add-outline"></ion-icon></a>
