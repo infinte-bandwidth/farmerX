@@ -23,7 +23,6 @@
 * Maps
 
 ## Screenshot
-<img src="screenshot/front1.png" height="500px">
 <img src="screenshot/front2.png" height="500px">
 <img src="screenshot/nav1.png" height="500px">
 <img src="screenshot/nav2.png" height="500px">
