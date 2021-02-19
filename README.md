@@ -25,8 +25,15 @@
 ## Screenshot
 <img src="screenshot/front1.png" height="500px">
 <img src="screenshot/front2.png" height="500px">
-<img src="screenshot/nav1.png" height="50px">
-<img src="screenshot/nav2.png" height="50px">
+<img src="screenshot/nav1.png" height="150px">
+<img src="screenshot/nav2.png" height="150px">
+<img src="screenshot/signup.png" height="500px">
+<img src="screenshot/login.png" height="500px">
+<img src="screenshot/news.png" height="150px">
+<img src="screenshot/news2.png" height="150px">
+<img src="screenshot/map.png" height="150px">
+<img src="screenshot/night.png" height="150px">
+<img src="screenshot/wheater.png" height="150px">
 
 
 ## ⚡ Function of FarmerX
