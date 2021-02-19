@@ -35,10 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
-            header("location: index.php");
 
         } else {
-            $showError = "Invalid Credentials";
+            $showError = "Invalid Credentials.";
         }
     }
 }
@@ -73,9 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-
-
-    
 
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
@@ -155,12 +151,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <?php
     if ($login) {
-        echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> You are logged in
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
+        echo "<script> window.alert('Success! You are now logged in.'); 
+        window.location='index.php'; </script>";
     }
     if ($showError) {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:90%; margin: 0 auto 0 auto;">
@@ -294,4 +286,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-
