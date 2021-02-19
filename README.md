@@ -12,7 +12,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/infinte-bandwidth/farmerX?color=yellow&logo=python)
 
 ## LOGO
-<img src="assets/images/fmax.png" height="250px">
+<img src="assets/images/fmax.png">
 
 ## Features
 
