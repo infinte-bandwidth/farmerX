@@ -80,8 +80,8 @@ Please adhere toward our [Code-of-Conduct](Code-of-Conduct.md).
   <img src="https://contrib.rocks/image?repo=infinte-bandwidth/farmerX" />
 </a>
 
-## PPT 
-[PPT](href="https://docs.google.com/presentation/d/1vK2Mb2VcDfSWqIljz7BqO7Fq3PyWnOkeB-jyatHlNfE/edit?usp=sharing")
+## PPT
+- https://docs.google.com/presentation/d/1vK2Mb2VcDfSWqIljz7BqO7Fq3PyWnOkeB-jyatHlNfE/edit?usp=sharing
 
 ### Like This?? Star ⭐ this Repo.
 💜 **Thanks**
