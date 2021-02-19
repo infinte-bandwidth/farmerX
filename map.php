@@ -45,26 +45,23 @@ if (!isset($_SESSION['loggedin'])) {
 
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
-        <a href="" class="login">
-            <ion-icon name="log-in-outline"></ion-icon>
-        </a>
-        <a href="" class="sign-up">
-            <ion-icon name="person-add-outline"></ion-icon>
-        </a>
-    <a href="" class="login"><ion-icon name="log-in-outline"></ion-icon></a>
-	<a href="" class="sign-up"><ion-icon name="person-add-outline"></ion-icon></a>
+        <?php
+        if (!isset($_SESSION['loggedin'])) {
+            echo "<a href='login.php' class='login'><ion-icon name='log-in-outline'></ion-icon></a>
+	        <a href='signup.php' class='sign-up'><ion-icon name='person-add-outline'></ion-icon></a>";
+        } else {
+            echo "<a href='logout.php' class='login'><ion-icon name='log-out-outline'></ion-icon></a>";
+        }
+        ?>
     </nav>
     <nav class="v-nav-primary">
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
-        <a href="" class="item1">
-            <?php 
-            if (isset($_SESSION['username']))
-            {
+        <a class="item1">
+            <?php
+            if (isset($_SESSION['username'])) {
                 echo '<ion-icon name=""></ion-icon>';
                 echo $_SESSION['username'];
-            }
-            else
-            {
+            } else {
                 echo '<ion-icon name="leaf-outline"></ion-icon>';
                 echo "Menu";
             }
@@ -85,14 +82,11 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
     <nav class="v-nav-services">
         <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
-        <a href="" class="item1">
-            <?php 
-            if (isset($_SESSION['username']))
-            {
+        <a class="item1">
+            <?php
+            if (isset($_SESSION['username'])) {
                 echo "<ion-icon name=''></ion-icon>";
-            }
-            else
-            {
+            } else {
                 echo "<ion-icon name='bag-handle'></ion-icon>";
             }
             ?>
@@ -109,6 +103,14 @@ if (!isset($_SESSION['loggedin'])) {
         <a href="msp.php" class="v-nav-item">
             <ion-icon name="logo-usd"></ion-icon>
             MSP
+        </a>
+        <a href="market.php" class="v-nav-item">
+            <ion-icon name="fish-outline"></ion-icon>
+            Market
+        </a>
+        <a href="news.php" class="v-nav-item">
+            <ion-icon name="color-fill-outline"></ion-icon>
+            News
         </a>
         <a href="map.php" class="v-nav-item">
             <ion-icon name="finger-print-outline"></ion-icon>
