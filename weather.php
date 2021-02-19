@@ -185,6 +185,7 @@ else
         }
 
         .container .tooltiptext {
+	    font-family: 'Roboto Mono', monospace;
             visibility: hidden;
             width: 300px;
             font-size: 15px;
