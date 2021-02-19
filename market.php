@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Agricultural Land
         </a>
     </nav>
-  <div class="wrap">
+  <div class="wrap" onclick="ifNav()">
   <div class="bodyoflogin">
 
 
