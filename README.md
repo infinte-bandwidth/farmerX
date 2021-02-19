@@ -45,8 +45,6 @@
 <img src="screenshot/weather.png" height="500px">
 
 
-## ⚡ Function of FarmerX
-
 ## 🔆 Tech Stack
 
 -  PHP: 66.7 %
