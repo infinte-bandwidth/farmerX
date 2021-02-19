@@ -4,8 +4,8 @@ $state="";
 session_start();
 if(!isset($_SESSION['loggedin']))
 {
-	header('Location: login.php'); 
-    echo "<script> window.alert('Please sign in first.'); </script>";
+	echo "<script> window.alert('Please sign in first.'); 
+    window.location='login.php'; </script>";
 }
 else
 {
