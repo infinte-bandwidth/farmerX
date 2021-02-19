@@ -161,7 +161,7 @@
                     </div>
                     <div class="offset-lg-3 col-lg-6">
                         <div class="section-heading" data-aos="fade-left">
-                            <p>We answer the most frequretly asked questions about us. <br>
+                            <p>We answer the most frequently asked questions about us. <br>
                                 We believe that a customer's trust is the most important criteria to be checked. </p>
                         </div>
                     </div>
@@ -191,10 +191,7 @@
                                 </div>
                                 <div class="accordion-body">
                                     <div class="content">
-                                        <p>We aim to combine technology and agriculture so that farmers can enhance their habi
-                                            <br><br>
-                                            Pellentesque maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut
-                                            eros rutrum sodales. Aliquam erat volutpat.
+                                        <p>We aim to combine technology and agriculture so that farmers can enhance their habit.
                                         </p>
                                     </div>
                                 </div>
@@ -224,9 +221,9 @@
                                 </div>
                                 <div class="accordion-body">
                                     <div class="content">
-                                        <p>We provide all the resources which help the farmers while farming like weather updates, latest news, region wise crop informations and much more.
+                                        <p>We provide all the resources which help the farmers while farming like weather updates, latest news, region wise crop information and much more.
                                             <br><br>
-                                            All of our content is personalised. That means that the user can view data sepcific to his,her region.
+                                            All of our content is personalised. That means that the user can view data sepcific to his/her region.
                                         </p>
                                     </div>
                                 </div>
@@ -241,8 +238,6 @@
                                 <div class="accordion-body">
                                     <div class="content">
                                         <p>The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings.
-                                            <br><br>
-
                                         </p>
                                     </div>
                                 </div>
