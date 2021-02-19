@@ -364,25 +364,24 @@ session_start(); ?>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Categories</h6>
+
                         <ul class="footer-links">
-                            <li><a href="#">C</a></li>
-                            <li><a href="#">UI Design</a></li>
-                            <li><a href="#">PHP</a></li>
-                            <li><a href="#">Java</a></li>
-                            <li><a href="#"">Android</a></li>
-                        <li><a href=" #">Templates</a></li>
+
+                            <li><a href="index.php"><img src="assets/images/fmax.png"> </a></li>
+
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
                         <h6>Quick Links</h6>
                         <ul class="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Contribute</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="weather.php">Weather</a></li>
+                            <li><a href="resources.php">Resources</a></li>
+                            <li><a href="map.php">Maps</a></li>
+                            <li><a href="msp.php">MSPs</a></li>
+                            <li><a href="market.php">Global Market</a></li>
+                            <li><a href="login.php">Login</a></li>
+                            <li><a href="signup.php">Sign Up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -392,7 +391,7 @@ session_start(); ?>
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
-                            <a href="#">Sitename</a>.
+                            <a href="index.php">FARMAX</a>.
                         </p>
                     </div>
 
