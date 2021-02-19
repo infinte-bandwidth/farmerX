@@ -115,7 +115,7 @@ session_start(); ?>
 </head>
 <body>
 	<!--NAVIGATION BAR STARTS-->
-  <nav class="h-nav">
+     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
         <?php
         if (!isset($_SESSION['loggedin'])) {
@@ -190,6 +190,7 @@ session_start(); ?>
         </a>
     </nav>
 	<!--NAVIGATION BAR ENDS-->
+	<div class="wrap">
 	<div class="tile-container">
 		<h1><ion-icon name="newspaper-outline"></ion-icon>Agricultural News</h1>
 		<div class="l-tile tile-1"> <!--tile 1 (large tile)-->
@@ -312,7 +313,7 @@ session_start(); ?>
 			<div class="time"><?php echo $publishedAt[8]; ?></div>
 		</div>
 	</div>
-
+	</div>
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> <!--nyc icons-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
