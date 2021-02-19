@@ -190,7 +190,7 @@ session_start(); ?>
         </a>
     </nav>
 	<!--NAVIGATION BAR ENDS-->
-	<div class="wrap">
+	<div class="wrap" onclick="ifNav()">
 	<div class="tile-container">
 		<h1><ion-icon name="newspaper-outline"></ion-icon>Agricultural News</h1>
 		<div class="l-tile tile-1"> <!--tile 1 (large tile)-->
