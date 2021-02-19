@@ -23,6 +23,11 @@
         $price = $_POST['price'];
         $sql = "INSERT INTO `global_market` (`username`, `state`, `crop`, `quantity` ,`price`) VALUES ( '$username', '$state', '$crop', '$quantity','$price');";
         $result = mysqli_query($conn, $sql);
+        if($result)
+        {
+            echo "<script> window.alert('Your crop has been made available to the market.'); 
+            window.location='show-market.php'; </script>";
+        }
     }
 
 ?>
@@ -45,7 +50,7 @@
 
     <h1 class="text-center">Add to Global Market</h1>
 
-<form action="show-market.php" method="post">
+<form action="market.php" method="post">
 
   <div class="mb-3">
     <label for="crop" class="form-label">Name of Crop</label>
