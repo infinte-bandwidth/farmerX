@@ -113,7 +113,7 @@ session_start(); ?>
                     A Farmer Friendly Handbook for Schemes & Programmes 2018-19.
                     It includes a list of all schemes and programmes launched by various
                     NGO's. Download it
-                    <a href="">
+                    <a href="http://agricoop.gov.in/sites/default/files/FFH201819_Eng.pdf">
                         <ion-icon name="download-outline"></ion-icon>
                     </a>
                 </div>
@@ -125,7 +125,7 @@ session_start(); ?>
                     A Farmer Friendly Handbook for Schemes & Programmes 2018-19.
                     It includes a list of all schemes and programmes launched by various
                     NGO's. Download it
-                    <a href="">
+                    <a href="http://agricoop.gov.in/sites/default/files/Handbook_Schemes_Prog_Eng.pdf">
                         <ion-icon name="download-outline"></ion-icon>
                     </a>
                 </div>
@@ -137,7 +137,7 @@ session_start(); ?>
                     A Farmer Friendly Handbook for Schemes & Programmes 2018-19.
                     It includes a list of all schemes and programmes launched by various
                     NGO's. Download it
-                    <a href="">
+                    <a href="http://agricoop.nic.in/sites/default/files/ext_rpt_1.pdf">
                         <ion-icon name="download-outline"></ion-icon>
                     </a>
                 </div>
@@ -149,7 +149,7 @@ session_start(); ?>
                     A Farmer Friendly Handbook for Schemes & Programmes 2018-19.
                     It includes a list of all schemes and programmes launched by various
                     NGO's. Download it
-                    <a href="">
+                    <a href="https://farmer.gov.in/imagedefault/handbooks/Farmer_Handbook_2014.pdf">
                         <ion-icon name="download-outline"></ion-icon>
                     </a>
                 </div>
@@ -161,7 +161,7 @@ session_start(); ?>
                     A Farmer Friendly Handbook for Schemes & Programmes 2018-19.
                     It includes a list of all schemes and programmes launched by various
                     NGO's. Download it
-                    <a href="">
+                    <a href="https://farmer.gov.in/imagedefault/handbooks/Farmer_Friendly_Handbook_2016_">
                         <ion-icon name="download-outline"></ion-icon>
                     </a>
                 </div>
@@ -173,7 +173,7 @@ session_start(); ?>
                     A Farmer Friendly Handbook for Schemes & Programmes 2018-19.
                     It includes a list of all schemes and programmes launched by various
                     NGO's. Download it
-                    <a href="">
+                    <a href="http://agricoop.gov.in/sites/default/files/Handbook%20Schemes%20%26%20Programme%20%2888%20Pages%29_17-02-18%29-11.pdf">
                         <ion-icon name="download-outline"></ion-icon>
                     </a>
                 </div>
