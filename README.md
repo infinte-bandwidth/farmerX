@@ -40,10 +40,9 @@
 
 ## 🔆 Tech Stack
 
--  JavaScript: xx%
--  PHP: XX %
--  CSS: XX %%
--  HTML: XX %%
+-  PHP: 66.7 %
+-  JavaScript: 21.2%
+-  CSS: 12.1 %%
 
 ## 📝 Learning Resources
 
