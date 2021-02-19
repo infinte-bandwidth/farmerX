@@ -155,7 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </nav>
 
     <!--MAIN SLIDE BEGINS-->
-<div class="wrap">
+<div class="wrap" onlclick="ifNav()">
     <div id="container" class="mainbg" data-aos="fade-down">
         <img src="assets/images/login1.jpg" style="height: 760px; width: 100%; ">
         <img src="assets/images/login2.jpg" style="height: 760px; width: 100%; ">
