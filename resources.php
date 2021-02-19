@@ -22,7 +22,7 @@ session_start(); ?>
 </head>
 
 <body>
-     <nav class="h-nav">
+        <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
         <?php
         if (!isset($_SESSION['loggedin'])) {
