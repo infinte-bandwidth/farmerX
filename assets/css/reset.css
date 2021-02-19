@@ -1,7 +1,7 @@
 /*CSS RESET FOR CONSISTANT BROWSER DISPLAY*/
 * {
 	box-sizing: border-box !important; /*Very very important*/
-	overflow: auto !important; /*for testing only, will remove it later*/
+	overflow: visible !important; /*for testing only, will remove it later*/
 }
 a:hover {
 	color: inherit;	
