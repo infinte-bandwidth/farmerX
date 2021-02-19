@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/nav.php">
-    <link rel="stylesheet" href="assets/css/resetreserved.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
 
 </head>
