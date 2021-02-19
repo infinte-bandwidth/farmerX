@@ -109,8 +109,8 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
 	
 	
-  <div class="container" style="font-family: 'Roboto Mono', monospace;margin-top: 2rem;">
-    <h2 style="text-align:center;">See your listings at a glance.</h2>
+   <div class="container" style="font-family: 'Roboto Mono', monospace;">
+        <p style="text-align:center; margin-top:20px;font-size:50px; padding:10px;">See your listings at a glance.</p>
     <table class="table table-striped table-dark table-bordered" id="myTable">
       <thead>
         <tr>
