@@ -153,7 +153,7 @@
 
 
     <section class="section" id="frequently-question"
-        style="background-attachment: fixed; font-family: 'Overpass', sans-serif;">
+        style="background-attachment: fixed; font-family: 'Overpass', sans-serif; overflow: auto !important">
         <div class="container">
             <!-- ***** Section Title Start ***** -->
             <div class="row">
