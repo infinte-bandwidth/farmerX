@@ -1,10 +1,11 @@
 <?php
 include 'dbconnect.php';
-$state=="";
+$state="";
 session_start();
 if(!isset($_SESSION['loggedin']))
 {
-	header('Location: login.php'); 
+	echo "<script> window.alert('Please sign in first.'); 
+    	window.location='login.php'; </script>";
 }
 else
 {
@@ -279,7 +280,7 @@ else
 		Area Sown<span class="info">That' it!</span><br>
 		Non-Agricultural Land<span class="info">That' it!</span>
 	</div>
-		<footer class="site-footer" style="font-family: 'Roboto Mono', monospace;">
+	<footer class="site-footer" style="font-family: 'Roboto Mono', monospace;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
@@ -398,19 +399,19 @@ else
 				tooltip.childNodes[7].innerHTML=" 4671";
 				tooltip.childNodes[10].innerHTML=" 734";
 			});
-			array[7].addEventListener("click",function() { <!--Daman-->
+			array[7].addEventListener("click",function() { 
 				tooltip.childNodes[1].innerHTML="Daman and Diu"
 				tooltip.childNodes[4].innerHTML=" 12";
 				tooltip.childNodes[7].innerHTML=" 11";
 				tooltip.childNodes[10].innerHTML=" 5";
 			});
-			array[8].addEventListener("click",function() { <!--Delhi-->
+			array[8].addEventListener("click",function() { 
 				tooltip.childNodes[1].innerHTML="Delhi"
 				tooltip.childNodes[4].innerHTML=" ";
 				tooltip.childNodes[7].innerHTML=" ";
 				tooltip.childNodes[10].innerHTML=" ";
 			});
-			array[9].addEventListener("click",function() { <!--Dadra and Nagar-->
+			array[9].addEventListener("click",function() { 
 				tooltip.childNodes[1].innerHTML="Dadra And Nagar"
 				tooltip.childNodes[4].innerHTML=" ";
 				tooltip.childNodes[7].innerHTML=" ";
@@ -573,9 +574,7 @@ else
 				tooltip.childNodes[10].innerHTML=" 1822";
 			});
 	</script>
-				<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
