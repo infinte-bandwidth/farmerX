@@ -28,7 +28,6 @@
 <img src="screenshot/nav2.png" height="500px">
 <img src="screenshot/signup.png" height="500px">
 <img src="screenshot/login.png" height="600px">
-<img src="screenshot/news.png" height="500px">
 <img src="screenshot/news2.png" height="500px">
 <img src="screenshot/map1.png" height="500px">
 <img src="screenshot/night.png" height="500px">
