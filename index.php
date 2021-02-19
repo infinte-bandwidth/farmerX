@@ -182,7 +182,7 @@
                         <div class="accordions is-first-expanded">
                             <article class="accordion">
                                 <div class="accordion-head">
-                                    <span>Why shoould someone join us?</span>
+                                    <span>Why should someone join us?</span>
                                     <span class="icon">
                                         <i class="icon fa fa-chevron-right"></i>
                                     </span>
