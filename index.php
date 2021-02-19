@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/nav.php">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/resetreserved.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
     <style>
         h5 {
@@ -49,16 +49,18 @@
 <body>
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
-        <a href="" class="login">
-            <ion-icon name="log-in-outline"></ion-icon>
-        </a>
-        <a href="" class="sign-up">
-            <ion-icon name="person-add-outline"></ion-icon>
-        </a>
+        <?php
+        if (!isset($_SESSION['loggedin'])) {
+            echo "<a href='login.php' class='login'><ion-icon name='log-in-outline'></ion-icon></a>
+	        <a href='signup.php' class='sign-up'><ion-icon name='person-add-outline'></ion-icon></a>";
+        } else {
+            echo "<a href='logout.php' class='login'><ion-icon name='log-out-outline'></ion-icon></a>";
+        }
+        ?>
     </nav>
     <nav class="v-nav-primary">
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
-        <a href="" class="item1">
+        <a class="item1">
             <?php
             if (isset($_SESSION['username'])) {
                 echo '<ion-icon name=""></ion-icon>';
@@ -69,7 +71,7 @@
             }
             ?>
         </a>
-        <a href="" class="v-nav-item item2">
+        <a href="index.php" class="v-nav-item item2">
             <ion-icon name="home-outline"></ion-icon>
             Home
         </a>
@@ -84,7 +86,7 @@
     </nav>
     <nav class="v-nav-services">
         <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
-        <a href="" class="item1">
+        <a class="item1">
             <?php
             if (isset($_SESSION['username'])) {
                 echo "<ion-icon name=''></ion-icon>";
@@ -94,27 +96,27 @@
             ?>
             Services
         </a>
-        <a href="" class="v-nav-item">
+        <a href="weather.php" class="v-nav-item">
             <ion-icon name="cloudy-night-outline"></ion-icon>
             Weather Forcast
         </a>
-        <a href="" class="v-nav-item">
+        <a href="resources.php" class="v-nav-item">
             <ion-icon name="bag-check-outline"></ion-icon>
             Resources
         </a>
-        <a href="" class="v-nav-item">
+        <a href="msp.php" class="v-nav-item">
             <ion-icon name="logo-usd"></ion-icon>
             MSP
         </a>
-        <a href="" class="v-nav-item">
+        <a href="market.php" class="v-nav-item">
             <ion-icon name="fish-outline"></ion-icon>
-            Major Crops
+            Market
         </a>
-        <a href="" class="v-nav-item">
+        <a href="news.php" class="v-nav-item">
             <ion-icon name="color-fill-outline"></ion-icon>
-            Soil Health Card
+            News
         </a>
-        <a href="" class="v-nav-item">
+        <a href="map.php" class="v-nav-item">
             <ion-icon name="finger-print-outline"></ion-icon>
             Agricultural Land
         </a>
@@ -136,7 +138,7 @@
             <img src="assets/images/bg6.jpg" style="height: 760px;width: 100%; ">
             <img src="assets/images/bg1.jpg" style="height: 760px; width: 100%; ">
             <div class="centered-text" style=" left: 50%;">
-                <h2 style="font-size:5vw;  font-family: 'Roboto Mono', monospace; height:100px;">WELCOME TO THE ABODE</h2>
+                <h2 style="font-size:5vw;  font-family: 'Roboto Mono', monospace; height:100px;">WELCOME TO FARMAX</h2>
             </div>
 
 
@@ -199,95 +201,53 @@
                             </article>
                             <article class="accordion">
                                 <div class="accordion-head">
-                                    <span>Second Question Answer</span>
+                                    <span>Are we authentic?</span>
                                     <span class="icon">
                                         <i class="icon fa fa-chevron-right"></i>
                                     </span>
                                 </div>
                                 <div class="accordion-body">
                                     <div class="content">
-                                        <p>Sed odio elit, cursus sed consequat at, rutrum eget augue. Cras ac eros iaculis,
-                                            tempor quam sit amet, scelerisque mi. Quisque eu risus eget nunc porttitor
-                                            vestibulum at a ante.
+                                        <p>Yes we are a genuine organisation.
                                             <br><br>
-                                            Praesent ut placerat turpis, vel pellentesque dolor. Sed rutrum eleifend tortor,
-                                            eu luctus orci sagittis in. In blandit fringilla mollis.
+                                            Most of our resources are provided by the Government of India and are thus absolutely validated.
                                         </p>
                                     </div>
                                 </div>
                             </article>
                             <article class="accordion">
                                 <div class="accordion-head">
-                                    <span>Third Answer for you</span>
+                                    <span>What do we provide?</span>
                                     <span class="icon">
                                         <i class="icon fa fa-chevron-right"></i>
                                     </span>
                                 </div>
                                 <div class="accordion-body">
                                     <div class="content">
-                                        <p>Proin feugiat ante ut vulputate rutrum. Nam quis erat turpis. Nullam maximus
-                                            pharetra lorem, eu condimentum est iaculis ut. Pellentesque mattis ultrices
-                                            dignissim.
+                                        <p>We provide all the resources which help the farmers while farming like weather updates, latest news, region wise crop informations and much more.
                                             <br><br>
-                                            Etiam et enim finibus, feugiat massa efficitur, finibus sapien. Sed cursus lacus
-                                            quis arcu scelerisque, eget ornare risus maximus. Aenean non lectus id odio
-                                            rhoncus pharetra.
+                                            All of our content is personalised. That means that the user can view data sepcific to his,her region.
                                         </p>
                                     </div>
                                 </div>
                             </article>
                             <article class="accordion">
                                 <div class="accordion-head">
-                                    <span>Fourth Question Asked</span>
+                                    <span>What is out motto?</span>
                                     <span class="icon">
                                         <i class="icon fa fa-chevron-right"></i>
                                     </span>
                                 </div>
                                 <div class="accordion-body">
                                     <div class="content">
-                                        <p>Phasellus eu purus ornare, eleifend orci nec, egestas nulla. Sed sed aliquet
-                                            sapien. Proin placerat, ipsum eu posuere blandit, tellus quam consectetur nisi,
-                                            id sollicitudin diam ex at nisi.
+                                        <p>The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings.
                                             <br><br>
-                                            Aenean fermentum eget turpis egestas semper. Sed finibus mollis venenatis.
-                                            Praesent at sem in massa iaculis pharetra.
+
                                         </p>
                                     </div>
                                 </div>
                             </article>
-                            <article class="accordion">
-                                <div class="accordion-head">
-                                    <span>Fifth Ever Question</span>
-                                    <span class="icon">
-                                        <i class="icon fa fa-chevron-right"></i>
-                                    </span>
-                                </div>
-                                <div class="accordion-body">
-                                    <div class="content">
-                                        <p>Quisque aliquet ipsum ut magna rhoncus, euismod lacinia elit rhoncus. Sed sapien
-                                            elit, mollis ut ultricies quis, fermentum nec ante.
-                                            <br><br>
-                                            Sed nec ex nec tortor fermentum sollicitudin id ut ligula. Ut sagittis rutrum
-                                            lectus, non sagittis ante euismod eu.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="accordion">
-                                <div class="accordion-head">
-                                    <span>Sixth Sense Question</span>
-                                    <span class="icon">
-                                        <i class="icon fa fa-chevron-right"></i>
-                                    </span>
-                                </div>
-                                <div class="accordion-body">
-                                    <div class="content">
-                                        <p>Suspendisse potenti. Ut dapibus leo ut massa vulputate semper. Pellentesque
-                                            maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut eros rutrum
-                                            sodales. Aliquam erat volutpat.</p>
-                                    </div>
-                                </div>
-                            </article>
+
                         </div>
                     </div>
                 </div>
@@ -298,7 +258,7 @@
 
         <div class="mainbg-secondary" data-aos="fade-down">
             <div class="centered-text-secondary" style="left: 50%;">
-                <h1 style="font-size: 5vw;height:100px; font-family: 'Roboto Mono', monospace;">WE CARE FOR THE FARMERS.</h1>
+                <h1 style="font-size: 5vw;height:100px;">EMPOWERING FARMERS.</h1>
             </div>
         </div>
 
@@ -319,25 +279,24 @@
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Categories</h6>
+
                         <ul class="footer-links">
-                            <li><a href="#">C</a></li>
-                            <li><a href="#">UI Design</a></li>
-                            <li><a href="#">PHP</a></li>
-                            <li><a href="#">Java</a></li>
-                            <li><a href="#"">Android</a></li>
-                        <li><a href=" #">Templates</a></li>
+
+                            <li><a href="index.php"><img src="assets/images/fmax.png"> </a></li>
+
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
                         <h6>Quick Links</h6>
                         <ul class="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Contribute</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="weather.php">Weather</a></li>
+                            <li><a href="resources.php">Resources</a></li>
+                            <li><a href="map.php">Maps</a></li>
+                            <li><a href="msp.php">MSPs</a></li>
+                            <li><a href="market.php">Global Market</a></li>
+                            <li><a href="login.php">Login</a></li>
+                            <li><a href="signup.php">Sign Up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -347,7 +306,7 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
-                            <a href="#">Sitename</a>.
+                            <a href="index.php">FARMAX</a>.
                         </p>
                     </div>
 
