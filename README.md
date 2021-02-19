@@ -57,7 +57,7 @@ Read these articles to get a quick grab on Php and other technologies used in th
 - https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources
 - https://guides.github.com/activities/hello-world/
 
-# This project is a part of Hack it out 2021 👣
+# This project is a part of Hack-It-Out 2021 👣
 
  ## 💻 Development guidelines
 
@@ -82,7 +82,7 @@ Please adhere toward our [Code-of-Conduct](Code-of-Conduct.md).
 </a>
 
 ## PPT 
-(https://docs.google.com/presentation/d/1vK2Mb2VcDfSWqIljz7BqO7Fq3PyWnOkeB-jyatHlNfE/edit#slide=id.g35f391192_00)[PPT link]
+<a href="https://docs.google.com/presentation/d/1vK2Mb2VcDfSWqIljz7BqO7Fq3PyWnOkeB-jyatHlNfE/edit?usp=sharing">
 
 ### Like This?? Star ⭐ this Repo.
 💜 **Thanks**
