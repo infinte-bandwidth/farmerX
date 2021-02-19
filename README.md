@@ -33,7 +33,7 @@
 <img src="screenshot/news2.png" height="500px">
 <img src="screenshot/map.png" height="500px">
 <img src="screenshot/night.png" height="500px">
-<img src="screenshot/wheater.png" height="200px">
+<img src="screenshot/weather.png" height="200px">
 
 
 ## ⚡ Function of FarmerX
