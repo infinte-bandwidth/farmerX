@@ -22,6 +22,10 @@
 * Login/SignUp
 * Maps
 
+## Screenshot
+<img src=>
+
+
 ## ⚡ Function of FarmerX
 
 ## 🔆 Tech Stack
