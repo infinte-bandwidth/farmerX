@@ -16,12 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $username = $_SESSION['username'];
   $crop = $_POST["crop"];
+  $city = $_POST['city'] . ", ". $state;
+  $contact = $_POST['contact']; 
   $quantity = $_POST["quantity"];
   $price = $_POST['price'];
-  $sql = "INSERT INTO `global_market` (`username`, `state`, `crop`, `quantity` ,`price`) VALUES ( '$username', '$state', '$crop', '$quantity','$price');";
+  $sql = "INSERT INTO `global_market` (`username`, `city`, `contact`, `crop`, `quantity` ,`price`) VALUES ( '$username', '$city', '$contact', '$crop', '$quantity','$price');";
   $result = mysqli_query($conn, $sql);
   if ($result) {
-    echo "<script> window.alert('Your crop has been made available to the market.'); 
+    echo "<script> window.alert('Your product has been made available to the market.'); 
             window.location='show-market.php'; </script>";
   }
 }
@@ -63,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="containermain" data-aos="flip-left">
       <div class="logo" style="margin-top: 0.02px;">
-        <p style="font-family: 'Roboto Mono', monospace; height:50px;">List your product on the global market.</p>
+        <p style="font-family: 'Roboto Mono', monospace; height:50px;">List your product in the Global Market</p>
       </div>
 
       <div class="login-item">
@@ -75,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
           <div class="form-field">
 
-            <input style="height: 55px;" type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity(in KGs)" required>
+            <input style="height: 55px;" type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity (in KGs)" required>
           </div>
           <div class="form-field">
 
@@ -83,19 +85,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <div class="form-field">
 
-            <input style="height: 55px;" type="text" class="form-control" id="#" name="#" placeholder="City" required>
+            <input style="height: 55px;" type="text" class="form-control" id="city" name="city" placeholder="City" required>
           </div>
           <div class="form-field">
 
-            <input style="height: 55px;" type="text" class="form-control" id="#" name="#" placeholder="Contact Number" required>
+            <input style="height: 55px;" type="text" class="form-control" id="contact" name="contact" placeholder="Contact Number" required>
           </div>
 
           <div class="form-field">
-            <input type="submit" value="Sell your produce">
+            <input type="submit" value="Sell your product">
           </div>
-          <div class="form-field">
-            <input type="submit" onclick="window.location.href = 'show-market.php' " value="View market">
-          </div>
+          <div class="logo" style="margin-bottom:50px;">
+                <p style="font-size:25px;font-family: 'Roboto Mono', monospace; height:50px;"><a href="show-market.php">View Global Market</a> </p>
+            </div>
 
         </form>
       </div>
