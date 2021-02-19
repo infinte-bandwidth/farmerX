@@ -28,7 +28,7 @@ include 'dbconnect.php';
 </head>
 
 <body>
-<nav class="h-nav">
+    <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
         <?php
         if (!isset($_SESSION['loggedin'])) {
@@ -103,7 +103,7 @@ include 'dbconnect.php';
         </a>
     </nav>
 	
-	
+	<div class="wrap">
     <div class="container" style="margin-top: 100px;">
         <h1 style="text-align: center;font-family: 'Roboto Mono', monospace; font-size:50px;">Minimum Support Prices</h1>
         <h2 style="text-align:center;font-family: 'Roboto Mono', monospace; font-size:25px; padding:10px;">Statement Showing Minimum Support Prices - Fixed by Government (Rs.quintal)</h2>
@@ -193,7 +193,7 @@ include 'dbconnect.php';
                 </div>
             </div>
         </footer>
-	
+	</div>
 	
 	
 	
