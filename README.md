@@ -82,7 +82,7 @@ Please adhere toward our [Code-of-Conduct](Code-of-Conduct.md).
 </a>
 
 ## PPT 
-<a href="https://docs.google.com/presentation/d/1vK2Mb2VcDfSWqIljz7BqO7Fq3PyWnOkeB-jyatHlNfE/edit?usp=sharing">
+[PPT](href="https://docs.google.com/presentation/d/1vK2Mb2VcDfSWqIljz7BqO7Fq3PyWnOkeB-jyatHlNfE/edit?usp=sharing")
 
 ### Like This?? Star ⭐ this Repo.
 💜 **Thanks**
