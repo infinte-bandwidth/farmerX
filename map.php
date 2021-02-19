@@ -45,6 +45,12 @@ if (!isset($_SESSION['loggedin'])) {
 
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
+        <a href="" class="login">
+            <ion-icon name="log-in-outline"></ion-icon>
+        </a>
+        <a href="" class="sign-up">
+            <ion-icon name="person-add-outline"></ion-icon>
+        </a>
     <a href="" class="login"><ion-icon name="log-in-outline"></ion-icon></a>
 	<a href="" class="sign-up"><ion-icon name="person-add-outline"></ion-icon></a>
     </nav>
@@ -64,7 +70,7 @@ if (!isset($_SESSION['loggedin'])) {
             }
             ?>
         </a>
-        <a href="" class="v-nav-item item2">
+        <a href="index.php" class="v-nav-item item2">
             <ion-icon name="home-outline"></ion-icon>
             Home
         </a>
@@ -92,27 +98,19 @@ if (!isset($_SESSION['loggedin'])) {
             ?>
             Services
         </a>
-        <a href="" class="v-nav-item">
+        <a href="weather.php" class="v-nav-item">
             <ion-icon name="cloudy-night-outline"></ion-icon>
             Weather Forcast
         </a>
-        <a href="" class="v-nav-item">
+        <a href="resources.php" class="v-nav-item">
             <ion-icon name="bag-check-outline"></ion-icon>
             Resources
         </a>
-        <a href="" class="v-nav-item">
+        <a href="msp.php" class="v-nav-item">
             <ion-icon name="logo-usd"></ion-icon>
             MSP
         </a>
-        <a href="" class="v-nav-item">
-            <ion-icon name="fish-outline"></ion-icon>
-            Major Crops
-        </a>
-        <a href="" class="v-nav-item">
-            <ion-icon name="color-fill-outline"></ion-icon>
-            Soil Health Card
-        </a>
-        <a href="" class="v-nav-item">
+        <a href="map.php" class="v-nav-item">
             <ion-icon name="finger-print-outline"></ion-icon>
             Agricultural Land
         </a>
