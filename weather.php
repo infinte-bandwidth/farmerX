@@ -5,7 +5,7 @@ session_start();
 if(!isset($_SESSION['loggedin']))
 {
 	echo "<script> window.alert('Please sign in first.'); 
-    window.location='login.php'; </script>";
+    	window.location='login.php'; </script>";
 }
 else
 {
