@@ -119,7 +119,7 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
 	<div class="wrap" onclick="ifNav()">
 	<div class="container" style="height:800px;">
-		<div id="wrapper" style="margin-top:100px;">
+		<div id="wrapper">
 			<?php
 			$output = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>";
 			echo $output;
