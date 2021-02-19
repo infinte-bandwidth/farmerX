@@ -50,7 +50,8 @@ if (!isset($_SESSION['loggedin'])) {
           echo "<tr>
           <th scope='row'>" . $sno . "</th>
           <td>" . $row['username'] . "</td>
-          <td>" . $row['state'] . "</td>
+          <td>" . $row['city'] . "</td>
+          <td>" . $row['contact'] . "</td>
           <td>" . $row['crop'] . "</td>
           <td>" . $row['quantity'] . "</td>
           <td>" . $row['price'] . "</td>
