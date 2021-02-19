@@ -1,6 +1,13 @@
 <?php
+session_start();
+if(isset($_SESSION['loggedin']))
+{
+	echo "<script> window.alert('You are already logged in.'); 
+    window.location='index.php'; </script>";
+}
 $showAlert = false;
 $showError = false;
+$captcha;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'dbconnect.php';
     $username = $_POST["username"];
@@ -11,12 +18,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $img_name = $_FILES['glryimage']['name'];
 
     $exists = false;
+
+    if (isset($_POST['g-recaptcha-response'])) {
+        $captcha = $_POST['g-recaptcha-response'];
+    }
+
+    if (!$captcha) {
+        echo "<script> window.alert('Please check the captcha form.'); 
+        window.location='signup.php'; </script>";
+    }
+
+    $secretKey = "6LdEKVgaAAAAAOm6WolOYzm3qJMs2gsRUW5n-soU";
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+    $response = file_get_contents($url);
+    $responseKeys = json_decode($response, true);
+
+
+    if ($responseKeys["success"]) {
+
     // check whether  this username Exists
     $existSql = "SELECT * FROM `users` WHERE username = '$username'";
     $result = mysqli_query($conn, $existSql);
     $numExistRows = mysqli_num_rows($result);
     if ($numExistRows > 0) {
-        $showError = "Username Already Exists";
+        $showError = "Username already exists.";
+    } else if($state=="Select your state:")
+    {
+        $showError = "Please select your state.";
     } else {
         if (($password == $cpassword)  && $exists == false) {
 
@@ -29,22 +60,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     // read image data into a variable for inserting
                     $img_data = addslashes(file_get_contents($_FILES['glryimage']['tmp_name']));
+
+                    $sql = "INSERT INTO `users` (`username`, `imagedata`, `imagename`, `password`, `dt`, `state`) VALUES ( '$username','$img_data', '$img_name', '$password', current_timestamp(), '$state');";
+                    $result = mysqli_query($conn, $sql);
+                    if ($result) {
+                    $showAlert = true;
+                    $_SESSION['loggedin'] = true;
+                    $_SESSION['username'] = $username;
+                    }
+                }
+                else
+                {
+                    $showError = "Please select a valid image.";
                 }
             } else
-                header("Location: index.php");
+                {
+                    $showError = "Please select an image.";
+                }
 
-
-            $sql = "INSERT INTO `users` (`username`, `imagedata`, `imagename`, `password`, `dt`, `state`) VALUES ( '$username','$img_data', '$img_name', '$password', current_timestamp(), '$state');";
-            $result = mysqli_query($conn, $sql);
-            if ($result) {
-                $showAlert = true;
-                session_start();
-            $_SESSION['loggedin'] = true;
-            $_SESSION['username'] = $username;
-                header("location: index.php");
-            }
         } else {
-            $showError = "Password do not match";
+            $showError = "Passwords do not match.";
+        }
         }
     }
 }
@@ -79,22 +115,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-
-
-    <?php
-    if ($showAlert) {
-        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Success!</strong> You account has been created and you can login.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>';
-    }
-    if ($showError) {
-        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-<strong>Error!</strong>' . $showError . '
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>';
-    }
-    ?>
 
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
@@ -172,6 +192,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="logo" style="margin-top: 0.02px;">
                 <p style="font-family: 'Roboto Mono', monospace; height:50px;">Signup to get started</p>
             </div>
+            
+            <?php
+            if ($showAlert) {
+                echo "<script> window.alert('Success! Your account has been created.'); 
+                window.location='index.php'; </script>";
+            }
+            if ($showError) {
+                echo '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:90%; margin: 0 auto 0 auto;">
+                <strong>Error!</strong> ' . $showError . '
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                </div>';
+            }
+            ?>
+
             <div class="login-item">
                 <form action="signup.php" method="post" class="form form-login" enctype="multipart/form-data">
                     <div class="form-field">
@@ -244,7 +280,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="submit" value="Sign Up">
                     </div>
                     <div class=" logo">
-                        <p style="font-size:15px;font-family: 'Roboto Mono', monospace; height:50px;">Already registeresd? Login here:<br> <a href="login_new.php">LOGIN</a> </p>
+                        <p style="font-size:15px;font-family: 'Roboto Mono', monospace; height:50px;">Already registeresd? Login here:<br> <a href="login.php">LOGIN</a> </p>
                     </div>
                 </form>
             </div>
@@ -343,6 +379,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         });
     </script>
 </body>
-
 </html>
-
