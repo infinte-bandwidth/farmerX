@@ -117,7 +117,7 @@ if (!isset($_SESSION['loggedin'])) {
             Agricultural Land
         </a>
     </nav>
-	<div class="wrap">
+	<div class="wrap" onclick="ifNav()">
 	<div class="container" style="height:800px;">
 		<div id="wrapper" style="margin-top:100px;">
 			<?php
