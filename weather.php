@@ -293,11 +293,11 @@ else
     
     <?php for ($i = 0; $i < $cnt; $i++) { ?>
 
-        <?php if ($time[$i] == "9 AM") { ?> <div class="parallax" style="background-image : url('assets/images/bg101.jpg')"> </div> <?php } ?>
+        <?php if ($time[$i] == "9 AM") { ?> <div class="parallax" style="background-image : url('assets/images/day.jpg')"> </div> <?php } ?>
 
-        <?php if ($time[$i] == "3 PM") { ?> <div class="parallax" style="background-image : url('assets/images/bg2.jpg')"> </div> <?php } ?>
+        <?php if ($time[$i] == "3 PM") { ?> <div class="parallax" style="background-image : url('assets/images/noon.jpg')"> </div> <?php } ?>
 
-        <?php if ($time[$i] == "9 PM") { ?> <div class="parallax" style="background-image : url('assets/images/bg3.jpg')"> </div> <?php } ?>
+        <?php if ($time[$i] == "9 PM") { ?> <div class="parallax" style="background-image : url('assets/images/night.jpg')"> </div> <?php } ?>
 
         <div style="height:400px;font-size:36px;" data-aos="fade-down">
             <div class="container" style="box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15); margin-top: 100px; ">
