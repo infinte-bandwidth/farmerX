@@ -16,11 +16,22 @@
 
 ## Features
 
-* Connect to global Market
+* Connect to Global Market
 * Wheather Forecast
 * MSP
 * Login/SignUp
 * Maps
+
+
+## Setup
+
+* Clone this repository.
+* Install XAMPP.
+* Visit localhost/phpmyadmin in your browser.
+* Create a new database named ##users
+* Import users.sql
+* Start Apache Server and MySQL in XAMPP.
+* Visit localhost/farmerX/ in your browser.
 
 ## Screenshot
 <img src="screenshot/front2.png" height="500px">
@@ -40,7 +51,7 @@
 
 -  PHP: 66.7 %
 -  JavaScript: 21.2%
--  CSS: 12.1 %%
+-  CSS: 12.1 %
 
 ## 📝 Learning Resources
 
@@ -82,5 +93,6 @@ Please adhere toward our [Code-of-Conduct](Code-of-Conduct.md).
 ## PPT
 - https://docs.google.com/presentation/d/1vK2Mb2VcDfSWqIljz7BqO7Fq3PyWnOkeB-jyatHlNfE/edit?usp=sharing
 
-### Like This?? Star ⭐ this Repo.
+### Like This? Star ⭐ this repository.
+
 💜 **Thanks**
