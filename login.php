@@ -12,6 +12,7 @@ $captcha;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'dbconnect.php';
     $username = $_POST["username"];
+    $username = filter_var($username,FILTER_SANITIZE_STRING);
     $password = $_POST["password"];
 
     if (isset($_POST['g-recaptcha-response'])) {
