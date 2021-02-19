@@ -12,7 +12,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/infinte-bandwidth/farmerX?color=yellow&logo=python)
 
 ## LOGO
-<img src="https://cdn2.vectorstock.com/i/1000x1000/69/51/farmer-stylized-portrait-organic-products-logo-vector-22656951.jpg" height="250px">
+<img src="assets/images/fmax.png" height="250px">
 
 ## Features
 
