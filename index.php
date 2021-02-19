@@ -51,12 +51,21 @@
 <body>
     <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
-		<a href="" class="login"><ion-icon name="log-in-outline"></ion-icon></a>
-		<a href="" class="sign-up"><ion-icon name="person-add-outline"></ion-icon></a>
+        <?php
+        if(!isset($_SESSION['loggedin']))
+        {
+	        echo "<a href='login.php' class='login'><ion-icon name='log-in-outline'></ion-icon></a>
+	        <a href='signup.php' class='sign-up'><ion-icon name='person-add-outline'></ion-icon></a>";
+        }
+        else
+        {
+            echo "<a href='logout.php' class='login'><ion-icon name='log-out-outline'></ion-icon></a>";
+        }
+        ?>
     </nav>
     <nav class="v-nav-primary">
         <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
-        <a href="" class="item1">
+        <a class="item1">
             <?php 
             if (isset($_SESSION['username']))
             {
@@ -70,7 +79,7 @@
             }
             ?>
         </a>
-        <a href="" class="v-nav-item item2">
+        <a href="index.php" class="v-nav-item item2">
             <ion-icon name="home-outline"></ion-icon>
             Home
         </a>
@@ -85,7 +94,7 @@
     </nav>
     <nav class="v-nav-services">
         <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
-        <a href="" class="item1">
+        <a class="item1">
             <?php 
             if (isset($_SESSION['username']))
             {
@@ -98,27 +107,27 @@
             ?>
             Services
         </a>
-        <a href="" class="v-nav-item">
+        <a href="weather.php" class="v-nav-item">
             <ion-icon name="cloudy-night-outline"></ion-icon>
             Weather Forcast
         </a>
-        <a href="" class="v-nav-item">
+        <a href="resources.php" class="v-nav-item">
             <ion-icon name="bag-check-outline"></ion-icon>
             Resources
         </a>
-        <a href="" class="v-nav-item">
+        <a href="msp.php" class="v-nav-item">
             <ion-icon name="logo-usd"></ion-icon>
             MSP
         </a>
-        <a href="" class="v-nav-item">
+        <a href="market.php" class="v-nav-item">
             <ion-icon name="fish-outline"></ion-icon>
-            Major Crops
+            Market
         </a>
-        <a href="" class="v-nav-item">
+        <a href="news.php" class="v-nav-item">
             <ion-icon name="color-fill-outline"></ion-icon>
-            Soil Health Card
+            News
         </a>
-        <a href="" class="v-nav-item">
+        <a href="map.php" class="v-nav-item">
             <ion-icon name="finger-print-outline"></ion-icon>
             Agricultural Land
         </a>
@@ -133,7 +142,7 @@
     <!--nyc icons,100% scalable-->
     <!--
     <!--MAIN SLIDE BEGINS-->
-<div class="wrap" onclick="ifNav()">    
+    <div class="wrap" onclick="ifNav()">    
     <div id="container" class="mainbg" data-aos="fade-down">
         <img src="assets/images/bg3.jpg" style="height: 760px; width: 100%; ">
         <img src="assets/images/bg4.jpg" style="height: 760px; width: 100%; ">
@@ -370,7 +379,7 @@
             </div>
         </div>
     </footer>
-  </div>
+    </div>
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
@@ -414,4 +423,3 @@
 </body>
 
 </html>
-
