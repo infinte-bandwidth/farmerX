@@ -1,6 +1,7 @@
 <?php header("Content-type: text/css"); ?>
 
 <?php
+error_reporting(0);
 include '../../dbconnect.php';
 session_start();
 // fetch image from database
