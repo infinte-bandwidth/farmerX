@@ -28,7 +28,7 @@
 * Clone this repository.
 * Install XAMPP.
 * Visit localhost/phpmyadmin in your browser.
-* Create a new database named <h4>users</h4>
+* Create a new database named users
 * Import users.sql
 * Start Apache Server and MySQL in XAMPP.
 * Visit localhost/farmerX/ in your browser.
