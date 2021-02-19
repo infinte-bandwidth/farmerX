@@ -12,8 +12,14 @@ include 'dbconnect.php';
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/art.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/nav.php">
-	<link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
 </head>
 
 <body>
@@ -128,6 +134,59 @@ include 'dbconnect.php';
 
         </table>
     </div>
+	
+	
+	<footer class="site-footer" style="font-family: 'Roboto Mono', monospace;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify">We at FARMERx aim to radically change the lives and technologies used by farmers to empower them and change their lives drastically.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+
+                        <ul class="footer-links">
+
+                            <li><a href="index.php"><img src="assets/images/fmax.png"> </a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="weather.php">Weather</a></li>
+                            <li><a href="resources.php">Resources</a></li>
+                            <li><a href="map.php">Maps</a></li>
+                            <li><a href="msp.php">MSPs</a></li>
+                            <li><a href="market.php">Global Market</a></li>
+                            <li><a href="login.php">Login</a></li>
+                            <li><a href="signup.php">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                            <a href="index.php">FARMAX</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     <hr>
 
