@@ -23,9 +23,14 @@ else
 			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Agricultural Land</title>
-		<link rel="stylesheet" href="assets/css/reset.css">
-		<link rel="stylesheet" href="assets/css/map-styles.css">
-		<link rel="stylesheet" href="assets/css/nav.php">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+		    <link rel="stylesheet" type="text/css" href="assets/css/art.css">
+		    <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel.css">
+		    <link rel="stylesheet" href="assets/css/style.css">
+		    <link rel="stylesheet" href="assets/css/nav.php">
+		    <link rel="stylesheet" href="assets/css/reset.css">
+		    <link rel="stylesheet" href="assets/css/carousel.css">
 		<?php
 		if($state!="")
 		{
