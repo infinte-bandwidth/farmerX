@@ -44,64 +44,79 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
 
 	<nav class="h-nav">
-		<ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
-	</nav>
-	<nav class="v-nav-primary">
-		<ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
-		<a href="" class="item1">
-			<ion-icon name="leaf-outline"></ion-icon>
-			<?php
-			if (isset($_SESSION['username'])) {
-				echo $_SESSION['username'];
-			} else {
-				echo "Menu";
-			}
-			?>
-		</a>
-		<a href="" class="v-nav-item item2">
-			<ion-icon name="home-outline"></ion-icon>
-			Home
-		</a>
-		<a href="javascript:openServices()" class="v-nav-item">
-			<ion-icon name="bar-chart-outline"></ion-icon>
-			Services
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="call-outline"></ion-icon>
-			Contact Us
-		</a>
-	</nav>
-	<nav class="v-nav-services">
-		<ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
-		<a href="" class="item1">
-			<ion-icon name="bag-handle"></ion-icon>
-			Services
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="cloudy-night-outline"></ion-icon>
-			Weather Forcast
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="bag-check-outline"></ion-icon>
-			Resources
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="logo-usd"></ion-icon>
-			MSP
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="fish-outline"></ion-icon>
-			Major Crops
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="color-fill-outline"></ion-icon>
-			Soil Health Card
-		</a>
-		<a href="" class="v-nav-item">
-			<ion-icon name="finger-print-outline"></ion-icon>
-			Agricultural Land
-		</a>
-	</nav>
+        <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
+    <a href="" class="login"><ion-icon name="log-in-outline"></ion-icon></a>
+	<a href="" class="sign-up"><ion-icon name="person-add-outline"></ion-icon></a>
+    </nav>
+    <nav class="v-nav-primary">
+        <ion-icon name="return-up-back-outline" onclick="closeNav()"></ion-icon>
+        <a href="" class="item1">
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo '<ion-icon name=""></ion-icon>';
+                echo $_SESSION['username'];
+            }
+            else
+            {
+                echo '<ion-icon name="leaf-outline"></ion-icon>';
+                echo "Menu";
+            }
+            ?>
+        </a>
+        <a href="" class="v-nav-item item2">
+            <ion-icon name="home-outline"></ion-icon>
+            Home
+        </a>
+        <a href="javascript:openServices()" class="v-nav-item">
+            <ion-icon name="bar-chart-outline"></ion-icon>
+            Services
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="call-outline"></ion-icon>
+            Contact Us
+        </a>
+    </nav>
+    <nav class="v-nav-services">
+        <ion-icon name="return-up-back-outline" onclick="closeServices()"></ion-icon>
+        <a href="" class="item1">
+            <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo "<ion-icon name=''></ion-icon>";
+            }
+            else
+            {
+                echo "<ion-icon name='bag-handle'></ion-icon>";
+            }
+            ?>
+            Services
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="cloudy-night-outline"></ion-icon>
+            Weather Forcast
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="bag-check-outline"></ion-icon>
+            Resources
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="logo-usd"></ion-icon>
+            MSP
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="fish-outline"></ion-icon>
+            Major Crops
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="color-fill-outline"></ion-icon>
+            Soil Health Card
+        </a>
+        <a href="" class="v-nav-item">
+            <ion-icon name="finger-print-outline"></ion-icon>
+            Agricultural Land
+        </a>
+    </nav>
 	<div class="container" style="height:800px;">
 		<div id="wrapper" style="margin-top:100px;">
 			<?php
