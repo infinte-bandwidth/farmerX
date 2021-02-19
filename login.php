@@ -1,5 +1,11 @@
 <?php
 error_reporting(0);
+session_start();
+if(isset($_SESSION['loggedin']))
+{
+	echo "<script> window.alert('You are already logged in.'); 
+    window.location='index.php'; </script>";
+}
 $login = false;
 $showError = false;
 $captcha;
@@ -32,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $num = mysqli_num_rows($result);
         if ($num == 1) {
             $login = true;
-            session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
 
@@ -184,7 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="submit" value="Log in">
                     </div>
                     <div class=" logo" >
-                        <p style="font-size:15px;font-family: 'Roboto Mono', monospace; height:50px;">Not registeresd? Sign-Up here:<br> <a href="signup_new.php">SIGN-UP</a> </p>
+                        <p style="font-size:15px;font-family: 'Roboto Mono', monospace; height:50px;">Not registeresd? Sign-Up here:<br> <a href="signup.php">SIGN-UP</a> </p>
                     </div>
                 </form>
             </div>
