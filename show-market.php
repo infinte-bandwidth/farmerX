@@ -33,7 +33,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 
 <body>
-<nav class="h-nav">
+    <nav class="h-nav">
         <ion-icon name="menu-outline" onclick="openNav()"></ion-icon>
         <?php
         if (!isset($_SESSION['loggedin'])) {
@@ -108,7 +108,7 @@ if (!isset($_SESSION['loggedin'])) {
         </a>
     </nav>
 	
-	
+	<div class="wrap" onclick="ifNav()">
    <div class="container" style="font-family: 'Roboto Mono', monospace;">
         <p style="text-align:center; margin-top:20px;font-size:50px; padding:10px;">See your listings at a glance.</p>
     <table class="table table-striped table-dark table-bordered" id="myTable">
@@ -197,8 +197,7 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
             </div>
         </footer>
-	
-	
+	</div>
 	
 	
   <!-- Optional JavaScript; choose one of the two! -->
