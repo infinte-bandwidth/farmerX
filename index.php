@@ -176,7 +176,7 @@
                                 We believe that most of the techniques used in this area are old and primitve.
                                 We aim to provide quality tools and knowledge to the farmers which are easy to use and aids them so that we can move towards smarter agriculture.</p>
                             <p>We create products and services that help the farmers to better understand the do-how of farming and make meaningful predictions which also prevents them from being cheated.</p>
-                            <span>Email: <a href=" #">email@company.com</a><br></span>
+                            <span>Email: <a href=" #">admin@farmax.in</a><br></span>
                             <a href="#contact-us" class="main-button">Contact Us</a>
                         </div>
                     </div>
